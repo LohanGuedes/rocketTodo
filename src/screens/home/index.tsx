@@ -16,6 +16,7 @@ export default function Home() {
     useEffect(() => {
         setFinishedCount(taskList.filter((task) => task.done === true).length)
         setCreatedCount(taskList.length)
+        setTaskList(taskList.sort((a) => a.done ? 1 : -1))
     }, [taskList])
 
 
